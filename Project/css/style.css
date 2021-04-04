@@ -1,0 +1,327 @@
+
+:root{
+    --primary:#ffce00;
+}
+
+*{
+    margin:0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background: black;
+}
+
+/* nav menu */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    align-items: center;
+    height:3.5rem;
+}
+
+.menu a{
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-right: 1rem;
+}
+
+.menu .renew-btn{
+    font-weight: normal;
+    text-transform: capitalize;
+    border-bottom: 2px solid var(--primary);
+    background-size: 100% 200%;
+    background-image:linear-gradient(to bottom, #fff 50%, var(--primary) 50%);
+    transition: background-position .2s ease-in-out, color .2s ease-in-out;
+}
+
+.menu .renew-btn:hover, .menu .renew-btn:focus{
+    background-position: 0 100%;
+}
+
+.menu img{
+    width: 8rem;
+}
+
+.fa-search{
+    margin-right: 1rem;
+}
+
+a.subscribe-btn{
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-image: linear-gradient(to left, black 50%, var(--primary) 50%);
+    transition: background-position .2s ease-in-out, color .2s ease-in-out;
+    color:white;
+    padding:1rem;
+}
+
+a.subscribe-btn:hover{
+    background-position: 0% 0;
+    color:black;
+}
+
+.fa-search,.renew-btn,.menu-btn{
+    display:none;
+}
+@media(min-width:768px){
+    .fa-search,.renew-btn,.menu-btn{
+        display:inline-block;
+    }    
+}
+
+/* header */
+.site-header h1{
+    font-size: 2.7rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top:3rem;
+}
+
+.site-header p{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top:1rem;
+}
+
+.site-header span{
+    border-bottom:2px solid var(--primary);
+    background-size: 100% 200%;
+    background-image:linear-gradient(to bottom, black 50%, var(--primary) 50%);
+    transition: background-position .1s ease-in-out, color .1s ease-in-out;
+}
+.site-header span:hover{
+    background-position: 0 100%;
+    color:black;
+    cursor:pointer;
+}
+
+/* main-news */
+.primary-news{
+    /*parent/container always needs to be relative */
+    position: relative;
+    width:90%;
+    height:auto;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:4rem;
+    overflow:hidden;
+}
+.primary-news img{
+    min-width:100%;
+    min-height:100%;
+    filter:grayscale(90%);
+}
+.primary-news-text{
+    /*child is always absolute */
+    position:absolute;
+    bottom:1rem;
+    left:2rem;
+    width:90%;
+
+}
+.primary-news-text h4{
+    font-size: 12px;
+    letter-spacing: 3px;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.primary-news-text h2{
+    font-size:32px;
+    color:white;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+.primary-news-text .read-text{
+    color:white;
+}
+.read-text{
+    text-transform: uppercase;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-top:2rem;
+    font-weight:700;
+}
+.read-text i{
+    margin-right:.7rem;
+    padding-bottom: .1rem;
+}
+.primary-news:hover img{
+    transform:scale(1.3);
+    cursor:pointer;
+}
+.secondary-news{
+    width:90%;
+    height:auto;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:4rem;
+    overflow: hidden;
+}
+.secondary-news img{
+    min-width: 100%;
+    min-height: 100%;
+
+}
+.secondary-text{
+    background-color: black;
+    padding:10px;
+}
+.secondary-text h4{
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.secondary-text p.news-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top:20px;
+}
+.secondary-news:hover img{
+    margin-bottom:1rem;
+    cursor:pointer;
+    transform:scale(1.1);
+}
+.secondary-news:hover > img{
+    border-bottom: 5px solid var(--primary);    
+}
+.dark-story{
+    border-right: 5px solid var(--primary);
+    border-bottom: 5px solid var(--primary);
+    color:white
+}
+.light-story .secondary-text{
+    background-color: white;
+    color: black;
+}
+
+/* today's picks */
+.todays-picks{
+    margin-top:3rem;
+    margin-bottom: 3rem;
+    margin-left:1rem;
+}
+.todays-picks h3{
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 700;
+    border-left: 7px solid var(--primary);
+    padding-left: 1.5rem;
+    margin-bottom:2rem;
+}
+.pick{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+.pick img{
+    max-width: 100px;
+}
+.pick-text{
+    margin-left: 1.5rem;
+    padding-top:.3rem;
+    font-weight: 700;
+}
+.pick-text p{
+    color:white;
+    font-size:.9rem;
+    letter-spacing: 1px;;
+}
+.pick-text .pick-header{
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    margin-bottom: .8rem;
+}
+.pick-subheader{
+    font-weight: normal;
+    margin-left:.5rem;
+}
+.pick-footer {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+    font-size: .8rem;
+}
+.pick-footer span{
+    border-bottom: 2px solid var(--primary);
+    background-size: 100% 200%;
+    background-image:linear-gradient(to bottom, black 50%, var(--primary) 50%);
+    transition: background-position .1s ease-in-out, color .1s ease-in-out;
+}
+.pick-footer span:hover{
+    background-position: 0 100%;
+    color:black;
+    cursor:pointer;
+}
+
+.pick:hover {
+    cursor:pointer;
+}
+.pick:hover p.pick-desc{
+    text-decoration: underline;
+}
+.pick-header:hover{
+    text-decoration:underline;
+}
+.pick-header:hover ~ p.pick-desc{
+    text-decoration: none;
+}
+
+/*larger view styling*/
+@media(min-width:768px){
+    .header-container{
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content: center;
+        width:97%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:3rem;
+    }
+    .main-news{
+        width: 70%;
+    }
+    .todays-picks{
+        width:30%
+    }
+    .secondary-news-container{
+        width:100%;
+        display:flex;
+        height:100%;
+    }
+    .primary-news{
+        width:100%;
+        height:25rem;
+        margin-bottom: 0;
+    }
+    .secondary-news{
+        width:50%;
+        margin-top:.5rem;
+        padding:.5rem;
+        max-height:100%;
+        overflow:hidden;
+    }
+    .secondary-news.dark-story img{
+        max-height: 5rem;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .secondary-text{
+        margin:1rem;
+    }
+}
